@@ -1,10 +1,20 @@
-var a = +prompt('Введите A');
-var b = +prompt('Введите B');
+var​ a = ​​+prompt('Введите число от 0 до 15')​;
+if (a >= 0 || a <= 15) {
 
-if (a >= 0 && b >= 0) {
-  console.log(a-b);
-} else if (a < 0 && b < 0) {
-  console.log(a*b);
+  switch​​ (​now​) {​
+    case​​ 'night'​:
+      alert​(​'Доброй ночи!'​);​
+      break​;
+    case​​ 'morning'​:
+      alert​(​'Доброе утро!'​);​
+      break​;
+    case​​ 'evening'​:
+      alert​(​'Добрый вечер!'​);​
+      break​;
+    default​:
+      echo​ 'Добрый день!'​;
+  }​
+
 } else {
-  console.log(a+b);
+  location.reload();
 }
