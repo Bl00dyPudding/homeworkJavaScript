@@ -1,0 +1,8 @@
+@keyframes scale {
+  from {
+    font-size: $font-size;
+  }
+  to {
+    font-size: $font-size * 2;
+  }
+}
