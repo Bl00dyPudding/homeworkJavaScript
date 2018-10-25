@@ -62,5 +62,9 @@ main {
   width: 30vw;
 }
 
+.hidden {
+  display: none;
+}
+
 @import 'keyframes.scss';
 @import 'responsive.scss';

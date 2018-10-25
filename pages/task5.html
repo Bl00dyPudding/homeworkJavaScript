@@ -37,26 +37,19 @@
   <section class="mainContent">
     <div>
       <p>
-        Задание №3
+        Задание №5
       </p>
+      <div class="codeBlock hidden">
+        <code>
+        </code>
+      </div>
       <p class="answer"></p>
     </div>
   </section>
 </main>
-<script type="text/javascript">
-  var a = +prompt('Введите число A');
-  var b = +prompt('Введите число B');
-
-  if (a >= 0 && b >= 0) {
-    console.log(a - b);
-    document.querySelector('.answer').innerText = a + ' - ' + b + ' = ' + (a - b);
-  } else if (a < 0 && b < 0) {
-    console.log(a * b);
-    document.querySelector('.answer').innerText = a + ' * ' + b + ' = ' + (a * b);
-  } else {
-    console.log(a + b);
-    document.querySelector('.answer').innerText = a + ' + ' + b + ' = ' + (a + b);
-  }
+<script>
+  var arithmeticFunction=function(r,t){return(r=+prompt("Введите число A"))+" + "+(t=+prompt("Введите число B"))+" = "+(r+t)+"; "+r+" - "+t+" = "+(r-t)+"; "+r+" * "+t+" = "+r*t+"; "+r+" / "+t+" = "+r/t};
+  document.querySelector('.answer').innerText = arithmeticFunction();
 </script>
 
 </html>

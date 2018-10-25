@@ -301,6 +301,10 @@ main {
   width: 30vw;
 }
 
+.hidden {
+  display: none;
+}
+
 @keyframes scale {
   from {
     font-size: 1em;
