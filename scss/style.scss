@@ -61,6 +61,79 @@ code {
   white-space: pre;
 }
 
+.buttons {
+  margin: 50px auto;
+  width: 50vw;
+  display: flex;
+  justify-content: space-between;
+  & .btn {
+    display: block;
+    width: 18%;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 10px 5px 0 rgba(0,0,0,0.5);
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $color-btn;
+    border: none;
+  }
+  & .btn:nth-child(1){
+    background-color: adjust-hue($color-bg-btn, 60deg);
+    &:hover{
+      background-color: darken(adjust-hue($color-bg-btn, 60deg), 10%);
+    }
+    &:active{
+      position: relative;
+      top: 1px;
+      background-color: lighten(adjust-hue($color-bg-btn, 60deg), 10%);
+    }
+  }
+  & .btn:nth-child(2){
+    background-color: adjust-hue($color-bg-btn, 120deg);
+    &:hover{
+      background-color: darken(adjust-hue($color-bg-btn, 120deg), 10%);
+    }
+    &:active{
+      position: relative;
+      top: 1px;
+      background-color: lighten(adjust-hue($color-bg-btn, 120deg), 10%);
+    }
+  }
+  & .btn:nth-child(3){
+    background-color: adjust-hue($color-bg-btn, 180deg);
+    &:hover{
+      background-color: darken(adjust-hue($color-bg-btn, 180deg), 10%);
+    }
+    &:active{
+      position: relative;
+      top: 1px;
+      background-color: lighten(adjust-hue($color-bg-btn, 180deg), 10%);
+    }
+  }
+  & .btn:nth-child(4){
+    background-color: adjust-hue($color-bg-btn, 240deg);
+    &:hover{
+      background-color: darken(adjust-hue($color-bg-btn, 240deg), 10%);
+    }
+    &:active{
+      position: relative;
+      top: 1px;
+      background-color: lighten(adjust-hue($color-bg-btn, 240deg), 10%);
+    }
+  }
+  & .btn:nth-child(5){
+    background-color: adjust-hue($color-bg-btn, 300deg);
+    &:hover{
+      background-color: darken(adjust-hue($color-bg-btn, 300deg), 10%);
+    }
+    &:active{
+      position: relative;
+      top: 1px;
+      background-color: lighten(adjust-hue($color-bg-btn, 300deg), 10%);
+    }
+  }
+}
+
 .hidden {
   display: none;
 }

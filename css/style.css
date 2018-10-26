@@ -300,6 +300,79 @@ code {
   white-space: pre;
 }
 
+.buttons {
+  margin: 50px auto;
+  width: 50vw;
+  display: flex;
+  justify-content: space-between;
+}
+.buttons .btn {
+  display: block;
+  width: 18%;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 10px 5px 0 rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  font-weight: 600;
+  color: white;
+  border: none;
+}
+.buttons .btn:nth-child(1) {
+  background-color: #b941e1;
+}
+.buttons .btn:nth-child(1):hover {
+  background-color: #a321ce;
+}
+.buttons .btn:nth-child(1):active {
+  position: relative;
+  top: 1px;
+  background-color: #c96de8;
+}
+.buttons .btn:nth-child(2) {
+  background-color: #e14169;
+}
+.buttons .btn:nth-child(2):hover {
+  background-color: #ce214c;
+}
+.buttons .btn:nth-child(2):active {
+  position: relative;
+  top: 1px;
+  background-color: #e86d8c;
+}
+.buttons .btn:nth-child(3) {
+  background-color: #e1b941;
+}
+.buttons .btn:nth-child(3):hover {
+  background-color: #cea321;
+}
+.buttons .btn:nth-child(3):active {
+  position: relative;
+  top: 1px;
+  background-color: #e8c96d;
+}
+.buttons .btn:nth-child(4) {
+  background-color: #69e141;
+}
+.buttons .btn:nth-child(4):hover {
+  background-color: #4cce21;
+}
+.buttons .btn:nth-child(4):active {
+  position: relative;
+  top: 1px;
+  background-color: #8ce86d;
+}
+.buttons .btn:nth-child(5) {
+  background-color: #41e1b9;
+}
+.buttons .btn:nth-child(5):hover {
+  background-color: #21cea3;
+}
+.buttons .btn:nth-child(5):active {
+  position: relative;
+  top: 1px;
+  background-color: #6de8c9;
+}
+
 .hidden {
   display: none;
 }
