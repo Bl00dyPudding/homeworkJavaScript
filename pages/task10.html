@@ -39,13 +39,31 @@
       <p>
         Задание №10
       </p>
-      <div class="codeBlock hidden">
-        <code>
-        </code>
+      <div class="magicEightBallWrapper">
+        <img class="magicEightBall shake" src="../img/Magic_eight_ball.png" alt="" width="250px" onclick="magicEightBall(random())">
+        <p class="answer magic"></p>
+        <p>
+          Задумай вопрос!<br>Потряси шар!<br>Нажми на него!
+        </p>
       </div>
-      <p class="answer"></p>
     </div>
   </section>
 </main>
+<script type="text/javascript">
+var random = function(){
+  return Math.floor(Math.random() * 3 + 1);
+};
+var magicEightBall = function(magic) {
+  let answer;
+  if (magic == 1) {
+    answer = 'ДА'
+  } else if (magic == 2) {
+    answer = 'НЕТ'
+  } else {
+    answer = 'ХЗ'
+  }
+  return document.querySelector(".answer").innerText = answer;
+}
 
+</script>
 </html>

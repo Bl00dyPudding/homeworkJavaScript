@@ -24,3 +24,12 @@
     color: adjust-hue($color, 270);
   }
 }
+
+@keyframes shake {
+  from {
+    transform: translateX(10px);
+  }
+  to {
+    transform: translateX(-10px);
+  }
+}
