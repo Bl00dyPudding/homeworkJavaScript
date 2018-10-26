@@ -285,11 +285,6 @@ main {
 }
 .mainContent h1 {
   text-align: center;
-  animation-name: scale;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-  animation-direction: alternate;
 }
 
 .codeBlock {
@@ -298,11 +293,31 @@ main {
   border-radius: 5px;
   color: #fff;
   margin: 0 auto;
-  width: 30vw;
+  width: 50vw;
+}
+
+code {
+  white-space: pre;
 }
 
 .hidden {
   display: none;
+}
+
+.scale {
+  animation-name: scale;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+
+.colorRotate {
+  animation-name: colorRotate;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
 }
 
 @keyframes scale {
@@ -311,5 +326,21 @@ main {
   }
   to {
     font-size: 2em;
+  }
+}
+@keyframes colorRotate {
+  0% {
+    color: yellow;
+    font-size: 1em;
+  }
+  25% {
+    color: #00ff80;
+  }
+  50% {
+    color: blue;
+    font-size: 2em;
+  }
+  75% {
+    color: #ff0080;
   }
 }

@@ -48,8 +48,10 @@
   </section>
 </main>
 <script>
-  var arithmeticFunction=function(r,t){return(r=+prompt("Введите число A"))+" + "+(t=+prompt("Введите число B"))+" = "+(r+t)+"; "+r+" - "+t+" = "+(r-t)+"; "+r+" * "+t+" = "+r*t+"; "+r+" / "+t+" = "+r/t};
-  document.querySelector('.answer').innerText = arithmeticFunction();
+var arithmeticFunction = function(r, t) {
+  return (r = +prompt("Введите число A")) + " + " + (t = +prompt("Введите число B")) + " = " + (r + t) + "; " + r + " - " + t + " = " + (r - t) + "; " + r + " * " + t + " = " + r * t + "; " + r + " / " + t + " = " + r / t
+};
+document.querySelector('.answer').innerText = arithmeticFunction();
 </script>
 
 </html>

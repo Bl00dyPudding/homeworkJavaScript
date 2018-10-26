@@ -45,11 +45,6 @@ main {
   }
   & h1 {
     text-align: center;
-    animation-name: scale;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    animation-direction: alternate;
   }
 }
 
@@ -59,11 +54,31 @@ main {
   border-radius: 5px;
   color: #fff;
   margin: 0 auto;
-  width: 30vw;
+  width: 50vw;
+}
+
+code {
+  white-space: pre;
 }
 
 .hidden {
   display: none;
+}
+
+.scale {
+  animation-name: scale;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+
+.colorRotate {
+  animation-name: colorRotate;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
 }
 
 @import 'keyframes.scss';

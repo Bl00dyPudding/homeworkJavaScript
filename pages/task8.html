@@ -37,32 +37,34 @@
   <section class="mainContent">
     <div>
       <p>
-        Задание №6
+        Задание №8
       </p>
-      <div class="codeBlock hidden">
+      <div class="codeBlock" style="width:100%">
         <code>
+          var power = function(_val, _pow) {
+            if (_pow != 1) {
+              return _val * power(_val, _pow - 1);
+            } else {
+              return _val;
+            }
+          };
+          ________________________________________________________
+          var power = function(_val, _pow) {
+            return 1 != _pow ? _val * power(_val, _pow - 1) : _val
+          };
         </code>
       </div>
       <p class="answer"></p>
     </div>
   </section>
 </main>
-<script type="text/javascript">
-var arithmeticFunction = function(t, e, r) {
-  t = +prompt("Введите число A"), e = +prompt("Введите число B");
-  switch (prompt("Введите математический символ")) {
-    case "+":
-      return t + e;
-    case "-":
-      return t - e;
-    case "*":
-      return t * e;
-    case "/":
-      return t / e;
-    default:
-      location.reload()
-  }
-};
-document.querySelector(".answer").innerText = arithmeticFunction();
+<script>
+  var val = +prompt("Введите число");
+  var pow = +prompt("Введите степень");
+  var power = function(_val, _pow) {
+    return 1 != _pow ? _val * power(_val, _pow - 1) : _val
+  };
+  document.querySelector(".answer").innerText = 'Ответ: ' + power(val, pow);
 </script>
+
 </html>
