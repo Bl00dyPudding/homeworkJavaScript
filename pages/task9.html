@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Homework JavaScript</title>
+  <meta name="description" content=" ">
+  <meta name="keywords" content=" ">
+  <meta name="author" content=" ">
+  <!-- <link rel="shortcut icon" href="../favicon.ico"> -->
+  <link rel="stylesheet" type="text/css" href="../css/style.min.css">
+</head>
+
+<body>
+
+</body>
+<header>
+  <nav class="mainNavigation">
+    <ul>
+      <li><a href="../index.html">Главная</a></li>
+      <li><a href="task1.html">Задание 1</a></li>
+      <li><a href="task2.html">Задание 2</a></li>
+      <li><a href="task3.html">Задание 3</a></li>
+      <li><a href="task4.html">Задание 4</a></li>
+      <li><a href="task5.html">Задание 5</a></li>
+      <li><a href="task6.html">Задание 6</a></li>
+      <li><a href="task7.html">Задание 7</a></li>
+      <li><a href="task8.html">Задание 8</a></li>
+      <li><a href="task9.html">Задание 9</a></li>
+      <li><a href="task10.html">Задание 10</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section class="mainContent">
+    <div>
+      <p>
+        Задание №9
+      </p>
+      <div class="codeBlock">
+        <p>Ножницы режут бумагу. Бумага заворачивает камень. Камень давит ящерицу, а ящерица травит Спока, в то время как Спок ломает ножницы, которые, в свою очередь, отрезают голову ящерице, которая ест бумагу, на которой улики против Спока, который испаряет камень, а камень, разумеется, затупляет ножницы.</p>
+      </div>
+      <div class="buttons">
+        <button class="btn" onclick="game(random(), 1)">Ножницы</button>
+        <button class="btn" onclick="game(random(), 2)">Бумага</button>
+        <button class="btn" onclick="game(random(), 3)">Камень</button>
+        <button class="btn" onclick="game(random(), 4)">Ящерица</button>
+        <button class="btn" onclick="game(random(), 5)">Спок</button>
+      </div>
+      <p class="answer"></p>
+    </div>
+  </section>
+</main>
+<script type="text/javascript">
+  var random = function(){
+    return Math.floor(Math.random() * 5 + 1);
+  };
+
+  var game = function(computerChoise, yourChoise) {
+    //1 - ножницы. Победа над: бумага(2) и ящерица(4).  Проигрыш от: камень(3) и Спок(5).
+    //2 - бумага.  Победа над: камень(3) и Спок(5).     Проигрыш от: ножницы(1) и ящерица(4).
+    //3 - камень.  Победа над: ножницы(1) и ящерица(4). Проигрыш от: бумага(2) и Спок(5).
+    //4 - ящерица. Победа над: бумага(2) и Спок(5).     Проигрыш от: ножницы(1) и камень(3).
+    //5 - Спок.    Победа над: ножницы(1) и камень(3).  Проигрыш от: бумага(2) и ящерица(4).
+    let answer;
+    let player;
+    let computer;
+
+    if (yourChoise == 1) {
+      player = 'Ножницы';
+    } else if (yourChoise == 2) {
+      player = 'Бумага';
+    } else if (yourChoise == 3) {
+      player = 'Камень';
+    } else if (yourChoise == 4) {
+      player = 'Ящерица';
+    } else {
+      player = 'Спок';
+    }
+
+    if (computerChoise == 1) {
+      computer = 'ножницы';
+    } else if (computerChoise == 2) {
+      computer = 'бумага';
+    } else if (computerChoise == 3) {
+      computer = 'камень';
+    } else if (computerChoise == 4) {
+      computer = 'ящерица';
+    } else {
+      computer = 'Спок';
+    }
+
+    if (
+      (yourChoise == 1 && computerChoise == 2) ||
+      (yourChoise == 1 && computerChoise == 4) ||
+      (yourChoise == 2 && computerChoise == 3) ||
+      (yourChoise == 2 && computerChoise == 5) ||
+      (yourChoise == 3 && computerChoise == 1) ||
+      (yourChoise == 3 && computerChoise == 4) ||
+      (yourChoise == 4 && computerChoise == 2) ||
+      (yourChoise == 4 && computerChoise == 5) ||
+      (yourChoise == 5 && computerChoise == 1) ||
+      (yourChoise == 5 && computerChoise == 3)
+    ) {
+      answer =  player + ' против ' + computer + '. Это победа!';
+    } else if (yourChoise == computerChoise) {
+      answer =  player + ' против ' + computer + '. Ничья!';
+    } else {
+      answer =  player + ' против ' + computer + '. Это поражение!';
+    }
+
+    console.log(random());
+    console.log(player);
+    console.log(computer);
+    console.log(answer);
+
+    return document.querySelector(".answer").innerText = answer;
+  };
+</script>
+
+</html>
