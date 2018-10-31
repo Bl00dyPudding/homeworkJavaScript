@@ -242,7 +242,7 @@ a:hover, a:focus {
 }
 
 header {
-  background-color: #680BAB;
+  background-color: royalblue;
 }
 
 .mainNavigation ul {
@@ -257,15 +257,15 @@ header {
   display: block;
   min-width: 50px;
   border-radius: 5px;
-  background-color: #590993;
+  background-color: #2b58de;
   padding: 10px;
   margin: 15px;
 }
 .mainNavigation a:hover {
-  background-color: #4b087b;
+  background-color: #214cce;
 }
 .mainNavigation a:active {
-  background-color: #850edb;
+  background-color: #6d8ce8;
   position: relative;
   top: 1px;
 }
@@ -293,18 +293,19 @@ main {
   border-radius: 5px;
   color: #fff;
   margin: 0 auto;
-  width: 50vw;
+  width: 100%;
 }
 
 code {
   white-space: pre;
+  width: 100%;
 }
 
 .buttons {
   margin: 50px auto;
   width: 50vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 .buttons .btn {
   display: block;
@@ -316,6 +317,7 @@ code {
   font-weight: 600;
   color: white;
   border: none;
+  margin: 5px;
 }
 .buttons .btn:nth-child(1) {
   background-color: #b941e1;
@@ -439,7 +441,7 @@ code {
   }
   50% {
     color: blue;
-    font-size: 2em;
+    font-size: 3em;
   }
   75% {
     color: #ff0080;
