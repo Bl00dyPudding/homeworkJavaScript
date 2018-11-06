@@ -279,6 +279,7 @@ main {
   max-width: 1280px;
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 .mainContent p {
   text-align: center;

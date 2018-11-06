@@ -11,6 +11,30 @@
   <meta name="author" content=" ">
   <!-- <link rel="shortcut icon" href="../favicon.ico"> -->
   <link rel="stylesheet" type="text/css" href="../css/style.min.css">
+  <style>
+    #chess {
+      margin: 50px auto;
+    }
+    tr {
+      height: 70px;
+    }
+    td {
+      border: 1px solid black;
+      width: 70px;
+      border-collapse: collapse;
+      vertical-align: center;
+      text-align: center;
+    }
+    .black {
+      background-color: black;
+    }
+    .white {
+      background-color: white;
+    }
+    .grey {
+      background-color: grey;
+    }
+  </style>
 </head>
 
 <body>
@@ -20,10 +44,7 @@
   <nav class="mainNavigation">
     <ul>
       <li><a href="../index.html">Главная</a></li>
-      <li><a href="task1.html">Задание 1</a></li>
-      <li><a href="../BlackBookShop/index.html" target="_blank">Задание 2</a></li>
-      <li><a href="task3.html">Задание 3</a></li>
-      <li><a href="../bulls/index.html" target="_blank">Cows & Bulls</a></li>
+      <li><a href="task1.html">Шахматы</a></li>
     </ul>
   </nav>
 </header>
@@ -34,60 +55,64 @@
         Задание №1
       </p>
       <div class="codeBlock">
-        <code>
-Написать функцию, преобразующую число в объект.
-Передавая на вход число от 0 до 999, мы должны получить на выходе объект,
-в котором в соответствующих свойствах описаны единицы, десятки и сотни.
-Например, для числа 245 мы должны получить следующий объект:
-{‘единицы’: 5, ‘десятки’: 4, ‘сотни’: 2}.
-Если число превышает 999, необходимо выдать соответствующее сообщение с помощью console.log и вернуть пустой объект.
-        </code>
+        <p>Создать шахматную доску</p>
       </div>
     </div>
+    <div id="chess"></div>
   </section>
 </main>
 <script type="text/javascript">
-  function randomNumber() {
-    return Math.floor(Math.random() * 1234);
-  }
+  var div = document.querySelector('#chess');
 
-  function functionName() {
+  var table = document.createElement('table');
+  var i = 1;
+  var j = 0;
+  var nl = 0;
+  var nr = 0;
+  var numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+  var letters = ['', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', ''];
+  
 
-    var array = [];
+  for (let r = 1; r <= 10; r++) {
 
-    for (var i = 0; i < 100; i++) {
-      let number = randomNumber(); //  рандом ванлав
-      // console.log('Рандомное число: ' + number);
+    let row = document.createElement('tr');
 
-      let object = {};
+    for (let c = 1; c <= 10; c++) {
 
-      if (number > 999) {
-
-        console.log('Число больше 999');
-        object.empty = "I'm empty"; // пустой объект плохо смотрелся, добавил надпись о том, что он пустой :)
-
+      let cell = document.createElement('td');
+      if (r == 1 || r == 10 || c == 1 || c == 10) {
+        cell.classList.add('grey');
+        if (r == 1 || r == 10) {
+          cell.innerText = letters[j];
+          j++;
+          if (j == 10) {
+            j = 0
+          }
+        } else if (c == 1) {
+          cell.innerText = numbers[nl];
+          nl++;
+        } else {
+          cell.innerText = numbers[nr];
+          nr++;
+        }
       } else {
-
-        object.units = number % 10;
-        // console.log('Единицы: ' + object.units);
-
-        object.tens = Math.floor((number % 100) / 10);
-        // console.log('Десятки: ' + object.tens);
-
-        object.hundreds = Math.floor(number / 100);
-        // console.log('Сотни: ' + object.hundreds);
-
+        if (i % 2 == 0 && r % 2 == 0 || i % 2 != 0 && r % 2 != 0 ) {
+          cell.classList.add('white');
+        } else {
+          cell.classList.add('black');
+        }
+        i++;
       }
 
-      object.number = number; // и добавил отображение всего числа
-      array.push(object);
-      // console.log(object);
+
+      // cell.innerText = 'row:' + r + ' cell:' + c;
+      row.appendChild(cell);
 
     }
-    console.log(array);
+    table.appendChild(row);
   }
 
-  functionName();
+  div.appendChild(table);
 </script>
 
 </html>
